@@ -10,7 +10,7 @@ module.exports = {
   //生成js文件
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name].[contenthash].js", //js文件名 (打包后随机取名)
+    filename: "[name].[contenthash].js", //js文件名 (打包后,加哈希值)
   },
   //设置插件参数
   plugins: [
@@ -18,7 +18,7 @@ module.exports = {
       template: "./src/index.html", //html源文件(生成index.html)
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].[contenthash].css", //css文件名 (打包后随机取名)
+      filename: "[name].[contenthash].css", //css文件名 (打包后,加哈希值)
     }),
   ],
   //引用css
